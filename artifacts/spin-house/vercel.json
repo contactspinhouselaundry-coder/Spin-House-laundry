@@ -2,6 +2,6 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "installCommand": "cd ../.. && pnpm install",
   "buildCommand": "cd ../.. && pnpm --filter @workspace/spin-house run build",
-  "outputDirectory": "dist/public",
+  "outputDirectory": "public",
   "framework": null
 }

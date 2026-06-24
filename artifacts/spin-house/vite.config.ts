@@ -36,10 +36,14 @@ export default defineConfig({
     },
     dedupe: ["react", "react-dom"],
   },
+  publicDir:
+    process.env.NODE_ENV === "production"
+      ? false
+      : path.resolve(import.meta.dirname, "public"),
   root: path.resolve(import.meta.dirname),
   build: {
-    outDir: path.resolve(import.meta.dirname, "dist/public"),
-    emptyOutDir: true,
+    outDir: path.resolve(import.meta.dirname, "public"),
+    emptyOutDir: false,
   },
   server: {
     port,
